@@ -17,5 +17,5 @@ const dog = Object.create(Animal);
 dog.init("Dog", "Woof");
 dog.speak(); // Output: Dog says Woof
 
-//LAV DEN HER OM
+//LAV DEN HER Omm
 
