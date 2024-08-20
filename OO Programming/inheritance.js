@@ -1,8 +1,32 @@
 
-//CONCAT
-const myCar = Car("Toyota", "Camry", "blue");
-myCar.start(); // Output: Toyota Camry is starting.
-myCar.drive(); // Output: The blue Toyota Camry is driving.
+// Define simple abilities as objects
+const canRun = {
+  run: function() {
+      console.log("Running fast!");
+  }
+};
+
+const canJump = {
+  jump: function() {
+      console.log("Jumping high!");
+  }
+};
+
+// Function to copy abilities to a target object
+function mixAbilities(target, ...abilities) {
+  Object.assign(target, ...abilities);
+}
+
+// Create a new object
+const rabbit = {};
+
+// Add run and jump abilities to the rabbit
+mixAbilities(rabbit, canRun, canJump);
+
+// Now the rabbit can use the run and jump methods
+rabbit.run();  // Output: Running fast!
+rabbit.jump(); // Output: Jumping high!
+
 
 const Animal = {
   init(type, sound) {
