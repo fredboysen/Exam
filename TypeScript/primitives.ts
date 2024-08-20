@@ -1,6 +1,6 @@
 // Primitive Types
 let age: number = 25;
-let name: string = "John Doe";
+let fullname: string = "John Doe";
 let isStudent: boolean = true;
 let nothing: null = null;
 let unknownValue: undefined = undefined;
@@ -15,14 +15,14 @@ greet = function (name: string): string {
     return `Hello, ${name}!`;
 };
 
-let add: (a: number, b: number) => number;
-add = function (a: number, b: number): number {
+let plus: (a: number, b: number) => number;
+plus = function (a: number, b: number): number {
     return a + b;
 };
 
 // Object Types
-let person: { name: string; age: number; isStudent: boolean };
-person = {
+let student: { name: string; age: number; isStudent: boolean };
+student = {
     name: "Jane Doe",
     age: 28,
     isStudent: false,
@@ -39,7 +39,7 @@ value = true;
 value = "hello";  
 
 // Intersection Types
-type Person = {
+type nameAge = {
     name: string;
     age: number;
 };
@@ -49,7 +49,7 @@ type Employee = {
     department: string;
 };
 
-let employee: Person & Employee;
+let employee: nameAge & Employee;
 employee = {
     name: "John Smith",
     age: 30,
